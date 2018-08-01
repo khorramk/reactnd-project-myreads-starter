@@ -2,15 +2,20 @@ import React, { Component } from 'react'
 import ListBooksTitle from './ListBooksTitle'
 import ListOfBooksContent from './ListOfBooksContent'
 
-class lisOfBooks extends Component{
+class ListOfBooks extends Component{
+    
  render(){
+     console.log('listofbooks: props', this.props.Books)
      return(
          <div className="list-books">
            <ListBooksTitle/>
-           <ListOfBooksContent/>
+           <ListOfBooksContent
+           
+           BooksContent={this.props.Books}
+           />
          </div>
      )
  }
 }
 
-export default lisOfBooks
+export default ListOfBooks
