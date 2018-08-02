@@ -12,6 +12,7 @@ class ListOfBooks extends Component{
            <ListOfBooksContent
            
            BooksContent={this.props.Books}
+                 moveBooks={this.props.moveBooks}
            />
          </div>
      )

@@ -23,7 +23,7 @@ class Main extends Component{
 
   }
 
-
+   
    
 
    /*increaseBooks =(books) =>{
@@ -31,7 +31,15 @@ class Main extends Component{
     this.setState()
 
    }*/
-  
+  moveBooks = (book, shelf) => {
+    BooksAPI.update(book, shelf);
+
+    BooksAPI.getAll().then((book) => {
+      this.setState({ books: book })
+
+    })
+
+  }
 
    render(){
      
@@ -41,6 +49,7 @@ class Main extends Component{
          <ListOfBooks
            
            Books={this.state.books}
+           moveBooks={this.moveBooks}
          />
          </div>
      )

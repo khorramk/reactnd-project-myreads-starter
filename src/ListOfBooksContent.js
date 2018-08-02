@@ -17,10 +17,17 @@ class ListOfBooksContent extends Component{
                   <div>
                       <Bookshelf title={titlearray[0]}
                       shelf={this.props.BooksContent}
+                              moveBooks={this.props.moveBooks}
                       
                       />
-                      <Bookshelf title={titlearray[1]}/>
-                      <Bookshelf title={titlearray[2]}/>
+                      <Bookshelf title={titlearray[1]}
+                              shelf={this.props.BooksContent}
+                              moveBooks={this.props.moveBooks}
+                      />
+                      <Bookshelf title={titlearray[2]}
+                              shelf={this.props.BooksContent}
+                              moveBooks={this.props.moveBooks}
+                      />
                   </div>
                   </div>
               )

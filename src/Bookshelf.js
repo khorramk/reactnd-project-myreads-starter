@@ -13,6 +13,7 @@ class Bookshelf extends Component{
                   <BookShelfBooks
                      shelfBooks={this.props.shelf}
                      header={this.props.title}
+                       moveBooks={this.props.moveBooks}
                   />
                </div>
            )
