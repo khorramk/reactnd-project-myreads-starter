@@ -17,12 +17,12 @@ class BookShelfBooks extends  Component{
                    <ol className="books-grid">
                        {
                            this.props.header === 'Current Reads' ? (this.props.shelfBooks.filter(book =>
-                               book.shelf === 'currentlyReading').map(
-                                   book => (
+                               book.shelf === 'currentlyReading').map(book => (
                                        <li key={book.id}>
                                        <Book 
                                          book={book}
                                                moveBooks={this.props.moveBooks}
+                                               
                                        />
                                        </li>
                                    )
@@ -34,6 +34,7 @@ class BookShelfBooks extends  Component{
                                         <Book
                                           book={book}
                                             moveBooks={this.props.moveBooks}
+                                            
                                         />
                                     </li>
                                 )
@@ -46,6 +47,7 @@ class BookShelfBooks extends  Component{
                                                <Book
                                                    book={book}
                                                    moveBooks={this.props.moveBooks}
+                                                   
                                                />
                                            </li>
                                        )
