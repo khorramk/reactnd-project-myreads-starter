@@ -1,12 +1,11 @@
-import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
-import { Route } from 'react-router-dom'
-import * as BooksAPI from './BooksAPI'
-import ListOfBooks from './ListOfBooks'
-import './App.css'
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import { Route } from 'react-router-dom';
+import * as BooksAPI from './BooksAPI';
+import ListOfBooks from './ListOfBooks';
+import './App.css';
 import SearchPage from './SearchPage';
-import escapeRegExp from 'escape-string-regexp'
-import sortBy from 'sort-by'
+
 
 
 class Main extends Component{
@@ -42,9 +41,8 @@ class Main extends Component{
    updatequery = (query) =>{
      if(query){
 
-       BooksAPI.search(query).then((searchedBooks) => {
-         console.log(searchedBooks)
-         this.setState({ matchedbooks: searchedBooks })
+       BooksAPI.search(query).then((matchedbooks) => {
+         this.setState({ matchedbooks: matchedbooks })
        }).catch()
 
        BooksAPI.getAll().then((book) => {
