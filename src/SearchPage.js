@@ -1,17 +1,16 @@
 import React, {Component} from 'react'
+import { Link } from 'react-router-dom'
 import Book from './Book'
 
 
 class SearchPage extends Component{
-         state ={
-             
-         }
+         
  
       render(){
           return (
               <div className="search-books">
                   <div className="search-books-bar">
-                      <a className="close-search" onClick={() => this.setState({ showSearchPage: false })}>Close</a>
+                      <Link to="/" className="close-search" >Close</Link>
                       <div className="search-books-input-wrapper">
                           {/*
                   NOTES: The search from BooksAPI is limited to a particular set of search terms.
@@ -27,7 +26,7 @@ class SearchPage extends Component{
                
                
                }
-                          <input type="text" value={this.props.queries} onChange={event=> this.props.getQuery(event.target.value)} placeholder="Search by title or author" />
+                          <input type="text" value={this.props.query} onChange={(event)=> this.props.getQuery(event.target.value)} placeholder="Search by title or author" />
 
                       </div>
                   </div>

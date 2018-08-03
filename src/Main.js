@@ -12,7 +12,6 @@ import sortBy from 'sort-by'
 class Main extends Component{
   
   state = {
-    showSearchPage: false,
     books: [],
     matchedbooks: [],
     query: ''
@@ -81,20 +80,30 @@ class Main extends Component{
 
 
          <div className="app">
-         {
-           this.state.showSearchPage ? (<SearchPage showingBooks={this.state.matchedbooks} moveBooks={this.moveBooks}  getQuery={this.getQuery}/>):
-           (<div>
+         <Route exact path="/" render={()=>(
+           <div>
              <ListOfBooks
 
                Books={this.state.books}
                moveBooks={this.moveBooks}
 
              />
-
              <div className="open-search">
-               <Link  to="/search" onClick={() => this.setState({ showSearchPage: true })}>Add a book</Link>
+                 <Link to="/Search">Add a book</Link>
              </div>
-           </div>)
+             </div>
+         )}/>
+
+         <Route path="/Search" component={()=>(
+             <SearchPage showingBooks={this.state.matchedbooks} moveBooks={this.moveBooks} getQuery={this.getQuery} query={this.state.query}/>
+         )}/>
+         {/*
+           this.state.showSearchPage ? (<SearchPage showingBooks={this.state.matchedbooks} moveBooks={this.moveBooks}  getQuery={this.getQuery}/>):
+           (<div>
+             
+
+            
+           </div>)*/
          }
          
 
