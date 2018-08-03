@@ -90,3 +90,12 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
 
 For details, check out [CONTRIBUTING.md](CONTRIBUTING.md).
+
+## required dependencies
+
+to get started you will need the following packages in your local machine:
+
+1. react-router-dom: type in terminal `npm install --save react-router-dom`
+2. regular expression: type in terminal `npm install --save escape-string-regexp sort-by`
+
+with that your good to go
